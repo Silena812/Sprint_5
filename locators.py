@@ -9,5 +9,4 @@ class Locators:
     REG_EMAIL = (By.XPATH, "//div[label[contains(text(),'Email')]]//input")
     REG_PASSWORD = (By.XPATH, "//input[@name= 'Пароль']")
     REGISTER_BUTTON = (By.XPATH, "//button[text()='Зарегистрироваться']")
-
-
+    INCORRECT_PASSWORD_MESSAGE = (By.XPATH, "//*[@id='root']/div/main/div/form/fieldset[3]/div/p")
