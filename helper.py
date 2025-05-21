@@ -22,3 +22,9 @@ def generate_wrong_password():
     )
     username = faker.user_name()
     return email, password, username
+
+def generate_empty_password():
+    email = faker.email()
+    password = ""
+    username = faker.user_name()
+    return email, password, username

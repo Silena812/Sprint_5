@@ -2,6 +2,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from helper import generate_wrong_password
+from helper import generate_empty_password
 from helper import generate_registration_data
 from locators import Locators
 from curl import *
@@ -60,7 +61,7 @@ class TestRegistrationWithEmptyPassword:
 
     def test_registration_empty_password_no_message(self, driver):
 
-        email, password, username = generate_wrong_password()
+        email, password, username = generate_empty_password()
         print("Открыта главная страница")
         driver.find_element(*Locators.ACCOUNT).click()
         print("Клик на 'Личный кабинет'")
