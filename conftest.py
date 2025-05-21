@@ -26,6 +26,7 @@ def driver():
 
 @pytest.fixture
 def login(driver):
+    driver.find_element(*Locators.ENTER_ACCOUNT_BUTTON_MAIN).click()
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable(Locators.ENTER_BUTTON)
     )
