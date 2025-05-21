@@ -9,7 +9,7 @@ class TestGoToConstructor:
 
         driver.find_element(*Locators.ACCOUNT).click()
         driver.find_element(*Locators.CONSTRUCTOR).click()
-        WebDriverWait(driver, 10).until(EC.url_to_be(main_site))
+        WebDriverWait(driver, 5).until(EC.url_to_be(main_site))
         assert driver.current_url == main_site
 
 class TestGoToConstructorLogo:
@@ -18,5 +18,5 @@ class TestGoToConstructorLogo:
 
         driver.find_element(*Locators.ACCOUNT).click()
         driver.find_element(*Locators.LOGO).click()
-        WebDriverWait(driver, 10).until(EC.url_to_be(main_site))
+        WebDriverWait(driver, 5).until(EC.url_to_be(main_site))
         assert driver.current_url == main_site
