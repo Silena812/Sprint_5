@@ -17,3 +17,7 @@ class Locators:
     ENTER_LINK = (By.XPATH, "// *[ @ id = 'root'] / div / main / div / div / p / a")
     FORGOT_PASSWORD_LINK = (By.XPATH, "//*[@id='root']/div/main/div/div/p[2]/a")
 
+    CONSTRUCTOR = (By.XPATH, "//*[@id='root']/div/header/nav/ul/li[1]/a/p")
+
+    EXIT_BUTTON = (By.XPATH, "//*[@id='root']/div/main/div/nav/ul/li[3]/button")
+

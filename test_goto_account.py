@@ -3,7 +3,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from locators import Locators
 from curl import *
 
-class TestEnterAccountButtonMainPage:
+class TestGoToAccount:
 
     def test_goto_account_account_opened(self, driver, login):
 

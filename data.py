@@ -1,5 +1,5 @@
 class Credentials:
-    email='email123@mail.com'
+    email='Elena_Silina_cog23_123@mail.com'
     password='TestPassword123'
 
 
