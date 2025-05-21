@@ -3,6 +3,8 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 from curl import *
 from data import Credentials
@@ -24,13 +26,12 @@ def driver():
 
 @pytest.fixture
 def login(driver):
-    """
-    Фикстура для авторизации пользователя.
-    """
-    # Вводим email в поле "Email"
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable(Locators.ENTER_BUTTON)
+    )
     driver.find_element(*Locators.EMAIL).send_keys(Credentials.email)
     driver.find_element(*Locators.PASSWORD).send_keys(Credentials.password)
-    driver.find_element(*Locators.REGISTER_BUTTON).click()
+    driver.find_element(*Locators.ENTER_BUTTON).click()
 
     return driver
 

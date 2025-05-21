@@ -1,6 +1,5 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import time
 from helper import generate_wrong_password
 from helper import generate_empty_password
 from helper import generate_registration_data
@@ -17,11 +16,11 @@ class TestRegistrationWithNewCredentials:
         print("Клик на 'Личный кабинет'")
         driver.find_element(*Locators.REG_LINK).click()
         print("Клик на 'Зарегистрироваться'")
-        driver.find_element(*Locators.REG_NAME).send_keys(username)
+        driver.find_element(*Locators.USER_NAME).send_keys(username)
         print("Введено имя")
-        driver.find_element(*Locators.REG_EMAIL).send_keys(email)
+        driver.find_element(*Locators.EMAIL).send_keys(email)
         print("Введён email")
-        driver.find_element(*Locators.REG_PASSWORD).send_keys(password)
+        driver.find_element(*Locators.PASSWORD).send_keys(password)
         print("Введён пароль")
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         print("Клик на кнопку регистрации")
@@ -42,11 +41,11 @@ class TestRegistrationWithInvalidPassword:
         print("Клик на 'Личный кабинет'")
         driver.find_element(*Locators.REG_LINK).click()
         print("Клик на 'Зарегистрироваться'")
-        driver.find_element(*Locators.REG_NAME).send_keys(username)
+        driver.find_element(*Locators.USER_NAME).send_keys(username)
         print("Введено имя")
-        driver.find_element(*Locators.REG_EMAIL).send_keys(email)
+        driver.find_element(*Locators.EMAIL).send_keys(email)
         print("Введён email")
-        driver.find_element(*Locators.REG_PASSWORD).send_keys(password)
+        driver.find_element(*Locators.PASSWORD).send_keys(password)
         print("Введён пароль")
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         print("Клик на кнопку регистрации")
@@ -67,11 +66,11 @@ class TestRegistrationWithEmptyPassword:
         print("Клик на 'Личный кабинет'")
         driver.find_element(*Locators.REG_LINK).click()
         print("Клик на 'Зарегистрироваться'")
-        driver.find_element(*Locators.REG_NAME).send_keys(username)
+        driver.find_element(*Locators.USER_NAME).send_keys(username)
         print("Введено имя")
-        driver.find_element(*Locators.REG_EMAIL).send_keys(email)
+        driver.find_element(*Locators.EMAIL).send_keys(email)
         print("Введён email")
-        driver.find_element(*Locators.REG_PASSWORD).send_keys(password)
+        driver.find_element(*Locators.PASSWORD).send_keys(password)
         print("Введён пароль")
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         print("Клик на кнопку регистрации")

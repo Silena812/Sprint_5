@@ -1,6 +1,6 @@
 class Credentials:
-    email='test@test.com'
-    password='CorrectPW'
-    name = 'UserName'
+    email='email123@mail.com'
+    password='TestPassword123'
+
 
 timeout = 20
