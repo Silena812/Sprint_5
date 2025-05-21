@@ -18,6 +18,16 @@ class Locators:
     FORGOT_PASSWORD_LINK = (By.XPATH, "//*[@id='root']/div/main/div/div/p[2]/a")
 
     CONSTRUCTOR = (By.XPATH, "//*[@id='root']/div/header/nav/ul/li[1]/a/p")
+    LOGO = (By.XPATH, "//*[@id='root']/div/header/nav/div")
 
     EXIT_BUTTON = (By.XPATH, "//*[@id='root']/div/main/div/nav/ul/li[3]/button")
+
+    BUNS_TAB = (By.XPATH, "//span[text()='Булки']/parent::div")
+    SAUCES_TAB = (By.XPATH, "//span[text()='Соусы']/parent::div")
+    FILLINGS_TAB = (By.XPATH, "//span[text()='Начинки']/parent::div")
+
+    BUNS_SECTION_TITLE = (By.XPATH, "//h2[text()='Булки']")
+    SAUCES_SECTION_TITLE = (By.XPATH, "//h2[text()='Соусы']")
+    FILLINGS_SECTION_TITLE = (By.XPATH, "//h2[text()='Начинки']")
+
 
