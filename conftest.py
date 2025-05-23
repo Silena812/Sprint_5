@@ -10,14 +10,13 @@ from data import Credentials
 from locators import Locators
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def driver():
     options = Options()
     options.headless = False
     service = Service()
     browser = webdriver.Chrome(options=options, service=service)
     browser.get(main_site)
-    print("Browser started")
     yield browser
     browser.quit()
 
